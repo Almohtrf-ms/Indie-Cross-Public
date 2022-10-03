@@ -48,7 +48,7 @@ class FreeplayState extends MusicBeatState
 	var diffText:FlxText;
 	var lerpScore:Int = 0;
 
-	var scoreMultiplier:Float = 1.25 - (0.25 * curMechDifficulty); // should be 0.75 if the mechanics are off !
+	var scoreMultiplier:Float = 1.25 - (0.75 * curMechDifficulty); // should be 0.75 if the mechanics are off !
 
 	var mechDiffText:FlxText;
 	var mechDiffMult:FlxText;
@@ -89,7 +89,7 @@ class FreeplayState extends MusicBeatState
 
 	var allowTransit:Bool = false;
 
-	private var music:MikuSoundSystem;
+	private var music:Almohtrf;
 	var waitshit:FlxTimer = new FlxTimer();
 
 	var alert:FlxSprite;
@@ -107,7 +107,7 @@ class FreeplayState extends MusicBeatState
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 
-		if (FlxG.save.data.givenCode || MainMenuState.debugTools) secretCodes.insert(2, 'saness');
+		if (FlxG.save.data.givenCode || MainMenuState.debugTools) secretCodes.insert(2, 'idk');
 
 		switch (freeplayType)
 		{
@@ -115,9 +115,8 @@ class FreeplayState extends MusicBeatState
 				{
 					if (FlxG.save.data.weeksbeat[0])
 					{
-						songs.push(new SongMetadata('Snake-Eyes', 0, 'cuphead'));
-						songs.push(new SongMetadata('Technicolor-Tussle', 0, 'cuphead'));
-						songs.push(new SongMetadata('Knockout', 0, 'angrycuphead'));
+						songs.push(new SongMetadata('blue-head', 0, 'xpoint'));
+						songs.push(new SongMetadata('A-mistake', 0, 'xpoint'));
 					}
 
 					if (FlxG.save.data.weeksbeat[1])
